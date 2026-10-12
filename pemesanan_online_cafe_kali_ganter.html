@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#171313">
+<title>Pemesanan Online Cafe Kali Ganter</title>
+<style>
+:root{--bg:#171313;--panel:#231d1d;--gold:#ffd21f;--orange:#ff8617;--cream:#fff8e7;--muted:#c9bdb2;--line:#463838}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--cream);font-family:Arial,Helvetica,sans-serif}button,input,select{font:inherit}
+.hero{background:radial-gradient(circle at 80% 10%,#57300f 0,transparent 35%),linear-gradient(135deg,#191414,#30201a);padding:28px 18px 24px;border-bottom:3px solid var(--gold);text-align:center}
+.logo{display:inline-flex;align-items:center;justify-content:center;width:76px;height:76px;border:2px solid var(--gold);border-radius:50%;font-weight:900;font-size:22px;color:var(--gold);letter-spacing:-2px;box-shadow:0 0 0 5px #ffd21f22;margin-bottom:10px}
+.eyebrow{color:var(--gold);text-transform:uppercase;font-size:12px;letter-spacing:3px;font-weight:800}.hero h1{font-size:clamp(28px,5vw,48px);margin:8px 0;text-transform:uppercase;letter-spacing:1px}.hero h1 span{color:var(--gold)}.hero p{color:var(--muted);margin:8px auto 0;max-width:600px;line-height:1.5}
+.wrap{max-width:1200px;margin:auto;padding:22px 16px 48px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.search{flex:1;min-width:190px}.field{background:#100e0e;border:1px solid var(--line);color:var(--cream);border-radius:10px;padding:12px 13px;width:100%;outline:none}.field:focus{border-color:var(--gold)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.filter{border:1px solid var(--line);background:#241d1d;color:var(--cream);padding:9px 13px;border-radius:999px;cursor:pointer}.filter.active,.filter:hover{background:var(--gold);color:#171313;border-color:var(--gold);font-weight:800}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:22px;align-items:start}.section-title{font-size:20px;margin:0 0 14px}.section-title span{color:var(--gold)}.menu-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.item{background:linear-gradient(145deg,#292020,#201a1a);border:1px solid var(--line);border-radius:13px;padding:14px;display:flex;flex-direction:column;min-height:142px}.item-top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start}.item h3{font-size:14px;line-height:1.35;margin:0;text-transform:uppercase}.price{color:var(--gold);font-weight:900;white-space:nowrap;font-size:14px}.item-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:15px}.category-tag{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}.add{background:var(--gold);border:0;color:#171313;border-radius:8px;padding:8px 12px;font-weight:900;cursor:pointer}.add:hover{background:#ffe56a}.empty{color:var(--muted);padding:22px;background:var(--panel);border-radius:12px}
+.cart{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;position:sticky;top:12px}.cart h2{margin:0 0 14px;font-size:20px}.cart h2 span{color:var(--gold)}.cart-list{display:flex;flex-direction:column;gap:12px;max-height:300px;overflow:auto}.cart-empty{color:var(--muted);font-size:14px;line-height:1.5;padding:12px 0}.cart-row{border-bottom:1px solid var(--line);padding-bottom:11px}.cart-row-main{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:700}.qty{display:flex;align-items:center;gap:9px;margin-top:8px}.qty button{width:27px;height:27px;border-radius:7px;border:1px solid var(--line);background:#100e0e;color:var(--cream);cursor:pointer}.qty .remove{margin-left:auto;color:#ff9b85;border:0;width:auto}.divider{height:1px;background:var(--line);margin:15px 0}.form-label{display:block;font-size:12px;color:var(--muted);margin:12px 0 6px}.summary-line{display:flex;justify-content:space-between;gap:10px;margin:10px 0;font-size:14px}.summary-line.total{font-size:18px;font-weight:900;color:var(--gold)}.hint{font-size:11px;color:var(--muted);line-height:1.45;margin-top:6px}.checkout{width:100%;margin-top:15px;background:#25d366;color:#082b15;border:0;border-radius:10px;padding:14px;font-weight:900;cursor:pointer;display:flex;justify-content:center;gap:8px;align-items:center}.checkout:disabled{opacity:.4;cursor:not-allowed}.notice{font-size:12px;color:var(--muted);line-height:1.5;margin-top:12px}.footer{text-align:center;color:#8f8177;font-size:12px;padding:20px;border-top:1px solid var(--line)}.mobile-cart{display:none}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.cart{position:static}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:500px){.menu-grid{grid-template-columns:1fr}.hero{padding-top:22px}.wrap{padding:17px 12px 30px}.item{min-height:120px}.cart{padding:15px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="logo">KG</div>
+  <div class="eyebrow">Wisata Edukasi • Cafe</div>
+  <h1>CAFE <span>KALI GANTER</span></h1>
+  <p>Pesan makanan dan minuman favoritmu secara online. Pilih menu, masukkan jarak pengantaran, lalu kirim pesanan langsung melalui WhatsApp.</p>
+</header>
+<main class="wrap">
+  <div class="toolbar">
+    <input id="search" class="field search" type="search" placeholder="Cari menu makanan atau minuman…">
+  </div>
+  <div class="filters" id="filters"></div>
+  <div class="layout">
+    <section>
+      <h2 class="section-title">Menu <span>Favorit</span></h2>
+      <div class="menu-grid" id="menu"></div>
+    </section>
+    <aside class="cart">
+      <h2>Keranjang <span id="cart-count">(0)</span></h2>
+      <div id="cart-list" class="cart-list"><div class="cart-empty">Keranjang masih kosong. Pilih menu untuk mulai memesan.</div></div>
+      <div class="divider"></div>
+      <label class="form-label" for="customer">Nama pemesan *</label>
+      <input id="customer" class="field" placeholder="Nama kamu" autocomplete="name">
+      <label class="form-label" for="address">Alamat lengkap pengiriman *</label>
+      <textarea id="address" class="field" rows="3" placeholder="Nama jalan, desa, patokan rumah…" style="resize:vertical"></textarea>
+      <label class="form-label" for="distance">Jarak dari Cafe Kali Ganter (km) *</label>
+      <input id="distance" class="field" type="number" min="0" step="0.1" placeholder="Contoh: 2.5">
+      <div class="hint">Ongkir dihitung Rp2.000 × jarak (km) yang kamu masukkan. Pastikan jarak sesuai sebelum mengirim pesanan.</div>
+      <div class="divider"></div>
+      <div class="summary-line"><span>Subtotal menu</span><strong id="subtotal">Rp0</strong></div>
+      <div class="summary-line"><span>Ongkos kirim</span><strong id="delivery">Rp0</strong></div>
+      <div class="summary-line total"><span>Total</span><span id="total">Rp0</span></div>
+      <label class="form-label" for="notes">Catatan pesanan (opsional)</label>
+      <textarea id="notes" class="field" rows="2" placeholder="Contoh: tidak pedas, gula sedikit…" style="resize:vertical"></textarea>
+      <button class="checkout" id="checkout" disabled>☘ Pesan via WhatsApp</button>
+      <div class="notice">Pesanan akan dibuka di WhatsApp Cafe Kali Ganter. Periksa kembali detail pesanan lalu tekan tombol kirim di WhatsApp.</div>
+    </aside>
+  </div>
+</main>
+<footer class="footer">© Cafe Kali Ganter • Pemesanan Online</footer>
+<script>
+const menuItems = [
+ {name:"Bakso",price:7000,cat:"Makanan"},{name:"Soto Ayam",price:7000,cat:"Makanan"},{name:"Mie Ayam",price:8000,cat:"Makanan"},{name:"Lalapan Lele",price:12000,cat:"Makanan"},
+ {name:"Cireng",price:7000,cat:"Kudapan"},{name:"Nugget",price:7000,cat:"Kudapan"},{name:"Sempol Ayam",price:5000,cat:"Kudapan"},{name:"Cilok Daging",price:5000,cat:"Kudapan"},{name:"Bakso/Cilok Bakar",price:8000,cat:"Kudapan"},{name:"Kentang Goreng/Bakar",price:8000,cat:"Kudapan"},{name:"Sosis Bakar",price:8000,cat:"Kudapan"},{name:"Snack Mixed",price:10000,cat:"Kudapan"},{name:"Dawet Daun Suji (Botol)",price:7000,cat:"Kudapan"},{name:"Siomay Nori",price:8000,cat:"Kudapan"},{name:"Siomay Udang",price:8000,cat:"Kudapan"},{name:"Udang Rambutan",price:8000,cat:"Kudapan"},{name:"Udang Keju",price:9000,cat:"Kudapan"},
+ {name:"Teh PNS/DGN",price:5000,cat:"Minuman"},{name:"Susu PNS/DGN",price:7000,cat:"Minuman"},{name:"Jeruk PNS/DGN",price:6000,cat:"Minuman"},{name:"Joshua",price:7000,cat:"Minuman"},{name:"Teh Tarik PNS/DGN",price:7000,cat:"Minuman"},{name:"Soda Gembira",price:10000,cat:"Minuman"},{name:"Chocolate Drink Sachet",price:8000,cat:"Minuman"},{name:"Leychi Fresh",price:9000,cat:"Minuman"},{name:"Mango Fresh",price:9000,cat:"Minuman"},{name:"Strawberry Fresh",price:9000,cat:"Minuman"},{name:"Taro",price:9000,cat:"Minuman"},{name:"Manggo",price:9000,cat:"Minuman"},{name:"Thai Tea",price:7000,cat:"Minuman"},{name:"Green Tea",price:8000,cat:"Minuman"},{name:"Red Velvet",price:9000,cat:"Minuman"},{name:"Lemon Tea",price:7000,cat:"Minuman"},{name:"Cappucino",price:8000,cat:"Minuman"},{name:"Chocolate",price:9000,cat:"Minuman"},{name:"Choco Oreo",price:9000,cat:"Minuman"},{name:"Mango Yakult",price:11000,cat:"Minuman"},{name:"Brown Sugar Fresh Milk",price:11000,cat:"Minuman"},{name:"Kopi Hitam",price:5000,cat:"Minuman"},{name:"Kopi Sachet",price:6000,cat:"Minuman"},{name:"Kopi Susu Racik",price:6000,cat:"Minuman"},{name:"Kopi/Susu Jahe",price:6000,cat:"Minuman"},{name:"Legen",price:11000,cat:"Minuman"},{name:"Wedang Uwuh",price:6000,cat:"Minuman"}
+];
+const waNumber="6285850151153", cart={}; let activeCat="Semua";
+const money=n=>"Rp"+Math.round(n).toLocaleString("id-ID");
+const categories=["Semua","Makanan","Kudapan","Minuman"];
+const filters=document.getElementById("filters"), menuEl=document.getElementById("menu");
+categories.forEach(cat=>{const b=document.createElement("button");b.className="filter"+(cat===activeCat?" active":"");b.textContent=cat;b.onclick=()=>{activeCat=cat;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));renderMenu()};filters.appendChild(b)});
+function renderMenu(){
+ const q=document.getElementById("search").value.toLowerCase().trim();
+ const filtered=menuItems.filter(x=>(activeCat==="Semua"||x.cat===activeCat)&&x.name.toLowerCase().includes(q));
+ menuEl.innerHTML="";
+ if(!filtered.length){menuEl.innerHTML='<div class="empty">Menu tidak ditemukan.</div>';return}
+ filtered.forEach(item=>{const idx=menuItems.indexOf(item), card=document.createElement("article");card.className="item";card.innerHTML=`<div class="item-top"><h3>${item.name}</h3><div class="price">${money(item.price)}</div></div><div class="item-bottom"><span class="category-tag">${item.cat}</span><button class="add" aria-label="Tambah ${item.name}">+ Tambah</button></div>`;card.querySelector("button").onclick=()=>{cart[idx]=(cart[idx]||0)+1;renderCart()};menuEl.appendChild(card)});
+}
+function renderCart(){
+ const list=document.getElementById("cart-list");list.innerHTML="";let count=0,subtotal=0;
+ Object.keys(cart).forEach(key=>{const qty=cart[key];if(!qty)return;const item=menuItems[Number(key)];count+=qty;subtotal+=qty*item.price;const row=document.createElement("div");row.className="cart-row";row.innerHTML=`<div class="cart-row-main"><span>${item.name}</span><span>${money(item.price*qty)}</span></div><div class="qty"><button aria-label="Kurangi">−</button><strong>${qty}</strong><button aria-label="Tambah">+</button><button class="remove">Hapus</button></div>`;const btns=row.querySelectorAll("button");btns[0].onclick=()=>{cart[key]--;if(cart[key]<=0)delete cart[key];renderCart()};btns[1].onclick=()=>{cart[key]++;renderCart()};btns[2].onclick=()=>{delete cart[key];renderCart()};list.appendChild(row)});
+ if(count===0)list.innerHTML='<div class="cart-empty">Keranjang masih kosong. Pilih menu untuk mulai memesan.</div>';
+ const rawDist=document.getElementById("distance").value, dist=Math.max(0,Number(rawDist)||0), delivery=rawDist!==""?Math.round(dist*2000):0;
+ document.getElementById("cart-count").textContent=`(${count})`;document.getElementById("subtotal").textContent=money(subtotal);document.getElementById("delivery").textContent=money(delivery);document.getElementById("total").textContent=money(subtotal+delivery);
+ document.getElementById("checkout").disabled=!(count>0&&document.getElementById("customer").value.trim()&&document.getElementById("address").value.trim()&&rawDist!==""&&Number(rawDist)>=0);
+}
+document.getElementById("search").addEventListener("input",renderMenu);
+["distance","customer","address"].forEach(id=>document.getElementById(id).addEventListener("input",renderCart));
+document.getElementById("checkout").onclick=()=>{
+ let lines=[],subtotal=0;
+ Object.keys(cart).forEach(key=>{const item=menuItems[Number(key)],qty=cart[key];if(qty){lines.push(`- ${item.name} x${qty} = ${money(item.price*qty)}`);subtotal+=item.price*qty}});
+ const distance=Number(document.getElementById("distance").value),delivery=Math.round(distance*2000),total=subtotal+delivery;
+ const msg=`Halo Cafe Kali Ganter, saya mau pesan:%0A%0A${encodeURIComponent(lines.join("\n"))}%0A%0ANama: ${encodeURIComponent(document.getElementById("customer").value.trim())}%0AAlamat: ${encodeURIComponent(document.getElementById("address").value.trim())}%0AJarak pengiriman: ${encodeURIComponent(distance)} km%0AOngkir (Rp2.000/km): ${encodeURIComponent(money(delivery))}%0ASubtotal: ${encodeURIComponent(money(subtotal))}%0A*TOTAL: ${encodeURIComponent(money(total))}*%0ACatatan: ${encodeURIComponent(document.getElementById("notes").value.trim()||"-")}%0A%0AMohon konfirmasi pesanan dan ongkirnya. Terima kasih.`;
+ window.open(`https://wa.me/${waNumber}?text=${msg}`,"_blank","noopener");
+};
+renderMenu();renderCart();
+</script>
+</body>
+</html>
